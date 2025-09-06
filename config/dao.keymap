@@ -13,9 +13,17 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick_tap_ms = <200>; };
+&lt { 
+  quick_tap_ms = <200>; 
+  tapping-term-ms = <140>;
+  flavor = "hold-preferred";
+};
 
-&mt { quick_tap_ms = <200>; };
+&mt { 
+  quick_tap_ms = <200>; 
+  tapping-term-ms = <140>;
+  flavor = "hold-preferred";
+};
 
 / {
     chosen {
@@ -35,7 +43,7 @@
 &kp CAPS   &kp Q  &kp W       &kp E       &kp R        &kp T        &kp Y        &kp U         &kp I       &kp O       &kp P     &kp LBKT
 &kp TAB    &kp A  &mt LGUI S  &mt LALT D  &mt LCTRL F  &mt LSHFT G  &mt RSHFT H  &mt RCTRL J   &mt RALT K  &mt RGUI L  &kp SEMI  &kp SQT
 &kp GRAVE  &kp Z  &kp X       &kp C       &kp V        &kp B        &kp N        &kp M         &kp COMMA   &kp DOT     &kp FSLH  &kp RBKT
-                              &kp RC(B)   &lt LWR ESC  &kp SPACE    &kp RETURN   &lt RSE BSPC  &kp BSPC
+                              &kp RC(B)   &lt LWR ESC  &kp SPACE    &kp RETURN   &mo RSE       &kp BSPC
             >;
         };
 
